@@ -10,11 +10,12 @@ import java.util.Vector;
 import javax.swing.table.*;
 
 import com.sm.db.DBConection;
-import com.sm.tools.Layout;
+import com.sm.db.DBManager;
+
 import com.sm.tools.SQL;
 
 public class zmlhModle extends AbstractTableModel{	
-	static Connection ct=null;
+	static Connection ct;
 	static PreparedStatement ps=null;
 	static ResultSet rs=null;	
 	static String juweiID;
@@ -25,8 +26,9 @@ public class zmlhModle extends AbstractTableModel{
 	
 	public void init(String sql,int i){
 		
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 		if(sql.equals("")){
 			//展示表中所有数据
 			sql=SQL.All_SQL_select;				
@@ -81,7 +83,7 @@ public class zmlhModle extends AbstractTableModel{
 				try {
 					if(rs!=null) rs.close();
 					if(ps!=null) ps.close();
-					if(ct!=null) ct.close();
+					if(ct!=null) DBManager.closeConn(ct);;
 					
 				} catch (Exception e2) {
 					e2.printStackTrace();
@@ -97,8 +99,9 @@ public class zmlhModle extends AbstractTableModel{
 	//修改数据库
     public boolean upDate(String sql,String []paras){
     	boolean b=true;
-    	DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+    	//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+    	ct=DBManager.getConn();
 		try {
 			ps=ct.prepareStatement(sql);
 			
@@ -117,15 +120,14 @@ public class zmlhModle extends AbstractTableModel{
 			try {
 				if(rs!=null) rs.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);;
 				
 			} catch (Exception e2) {
 				e2.printStackTrace();
 				// TODO: handle exception
 			}		
 		}
-		return b;
-		
+		return b;		
     }
 	
 	public zmlhModle() {
@@ -188,8 +190,7 @@ public class zmlhModle extends AbstractTableModel{
 				//hang.add(rs.getBoolean(13));
 				hang.add(rs.getInt(14));				
 				rowData.add(hang);				
-			}
-			
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 			// TODO: handle exception
@@ -197,7 +198,7 @@ public class zmlhModle extends AbstractTableModel{
 			try {
 				if(rs!=null) rs.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);;
 				
 			} catch (Exception e2) {
 				e2.printStackTrace();
@@ -231,8 +232,9 @@ public class zmlhModle extends AbstractTableModel{
 	
 	public static String getbaosuo(String smlh){
 		ResultSet RSbaosuo = null;
-			DBConection dbc = new DBConection();   
-			ct = dbc.getConnection();
+			//DBConection dbc = new DBConection();   
+			//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 			try {
 				//System.out.println("所名略号"+smlh);
 				ps=ct.prepareStatement("select name from T_BaoSuo where code= ?");
@@ -241,8 +243,7 @@ public class zmlhModle extends AbstractTableModel{
 				while(RSbaosuo.next()){				
 					baosuo=RSbaosuo.getString("name");
 					//System.out.println(RSbaosuo.getString("name"));				
-				}
-				
+				}				
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
@@ -250,20 +251,20 @@ public class zmlhModle extends AbstractTableModel{
 				try {
 					if(RSbaosuo!=null) RSbaosuo.close();
 					if(ps!=null) ps.close();
-					if(ct!=null) ct.close();
+					if(ct!=null) DBManager.closeConn(ct);;
 				} catch (Exception e2) {
 					// TODO: handle exceptione
 					e2.printStackTrace();
-				}
-			
+				}			
 			}
 			return baosuo;
 		}	
 	//获取路局
 	ResultSet RSluju;
 	public String getluju(String sdaizi){
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 		try {
 			System.out.println("局尾daizi"+sdaizi);
 			ps=ct.prepareStatement("select name from T_JuWei where daizi= ?");
@@ -281,12 +282,11 @@ public class zmlhModle extends AbstractTableModel{
 			try {
 				if(RSluju!=null) RSluju.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);;
 			} catch (Exception e2) {
 				// TODO: handle exceptione
 				e2.printStackTrace();
-			}
-		
+			}		
 		}
 		return luju;
 	}
@@ -295,9 +295,10 @@ public class zmlhModle extends AbstractTableModel{
 	public static int getbaosuoId(String selsname){
 		ResultSet baosuoID;
 		int baosuoid=0; 
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
-		//System.out.println("-------"+selsname+"-------选择的是");		
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		//System.out.println("-------"+selsname+"-------选择的是");	
+		ct=DBManager.getConn();
 		try {			
 			ps=ct.prepareStatement("select id from T_BaoSuo where name=?");
 			ps.setString(1, selsname);
@@ -317,8 +318,9 @@ public class zmlhModle extends AbstractTableModel{
 	
 	public static String getjuweiID(String sdaizi){
 		ResultSet RSjuwei = null;
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 		try {
 			//System.out.println("局尾daizi"+sdaizi);
 			ps=ct.prepareStatement("select id from T_JuWei where daizi= ?");
@@ -327,8 +329,7 @@ public class zmlhModle extends AbstractTableModel{
 			while(RSjuwei.next()){				
 				juweiID=RSjuwei.getString("id");
 				//System.out.println(model.getString("name"));				
-			}
-			
+			}			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -336,12 +337,11 @@ public class zmlhModle extends AbstractTableModel{
 			try {
 				if(RSjuwei!=null) RSjuwei.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);;
 			} catch (Exception e2) {
 				// TODO: handle exceptione
 				e2.printStackTrace();
-			}
-		
+			}		
 		}
 		return juweiID;
 	}
@@ -349,8 +349,9 @@ public class zmlhModle extends AbstractTableModel{
 	ResultSet model;
 	public Vector getmodel(int i,String juweiID){
 		Vector list=new Vector();
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 		try {
 			if(i==0){
 				ps=ct.prepareStatement("select name from T_BaoSuo where juweiId= ?");
@@ -379,23 +380,19 @@ public class zmlhModle extends AbstractTableModel{
 					list.addElement(model.getString("daizi"));
 					//System.out.println("公司     ："+model.getString("company"));				
 				}
-			}
-			
-			
+			}			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}finally{
 			try {
 				if(model!=null) model.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);;
 			} catch (Exception e2) {
 				// TODO: handle exceptione
 				e2.printStackTrace();
-			}
-			
-		}
-		
+			}			
+		}		
 		return list;
 	}
 	

@@ -16,7 +16,7 @@ import com.sm.view.zmlhModle;
 
 public class DBGetWebData_Icr {
 	
-		static Connection ct=null;
+		static Connection ct;
 		static PreparedStatement ps=null;
 		//static PreparedStatement pss=null;
 		static ResultSet rs=null;
@@ -34,8 +34,9 @@ public class DBGetWebData_Icr {
 			//增量数据建表			
 		    CRsql="create table ##Tm_Table"
 				+ "(uid varchar(50),satname varchar(50),daima varchar(15),bsname varchar(50),code varchar(15),opertype varchar(15))";		   
-			DBConection dbc = new DBConection();   
-			ct = dbc.getConnection();
+			//DBConection dbc = new DBConection();   
+			//ct = dbc.getConnection();
+		    ct=DBManager.getConn();
 			try {
 					ps=ct.prepareStatement(CRsql);
 					ps.executeUpdate();
@@ -117,8 +118,9 @@ public class DBGetWebData_Icr {
 			String SQL = "select * from ##Tm_Table where opertype='1'";
 			String AddSQL="insert into T_ZhanMingLueHao () values (?,?, ?, ?, ?,?)";
 			try {
-				DBConection dbc = new DBConection();   
-				ct = dbc.getConnection();
+				//DBConection dbc = new DBConection();   
+				//ct = dbc.getConnection();
+				ct=DBManager.getConn();
 				ps=ct.prepareStatement(SQL);
 				rs=ps.executeQuery();
 				while(rs.next()){
@@ -137,7 +139,7 @@ public class DBGetWebData_Icr {
 				try {
 					if(rs!=null) rs.close();
 					if(ps!=null) ps.close();
-					if(ct!=null) ct.close();
+					if(ct!=null) DBManager.closeConn(ct);
 					
 				} catch (Exception e2) {
 					e2.printStackTrace();
@@ -148,7 +150,8 @@ public class DBGetWebData_Icr {
 		}
 		
 		  //用临时表更新原表
-	    public static void SyndataDB(){
+	    public static boolean SyndataDB(){
+	    	boolean s=true;
 	    	//String InsertDataSQL="insert into T_ZhanMingLueHao (code,name,baosuoId,juweiId) values (?,?,?,?)";
 	    	String seleSQL = "select * from ##Tm_Table" ;
 	    	//String SynDataSQL = null;
@@ -182,9 +185,9 @@ public class DBGetWebData_Icr {
 							ps.setString(1, code);						
 							ps.executeUpdate();
 						}else{
-							
-							JOptionPane.showMessageDialog(null, "不存在删除项！");
-							
+							s=false;
+							JOptionPane.showMessageDialog(null, "不存在删除项！"+code);
+							log.error("删除失败！站名略号："+code+" 不存在");
 						}
 						
 						
@@ -199,14 +202,14 @@ public class DBGetWebData_Icr {
 				try {
 					if(rs!=null) rs.close();
 					if(ps!=null) ps.close();
-					if(ct!=null) ct.close();
+					if(ct!=null) DBManager.closeConn(ct);
 					
 				} catch (Exception e2) {
 					e2.printStackTrace();
 					// TODO: handle exception
 				}			
 			}
-	    	
+	    	return s;
 	    }
 	   
 	}

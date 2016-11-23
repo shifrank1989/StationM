@@ -23,6 +23,8 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -31,6 +33,7 @@ import com.sm.db.DBBackUp;
 import com.sm.db.DBConection;
 import com.sm.db.DBGetWebData;
 import com.sm.db.DBGetWebData_Icr;
+import com.sm.db.DBManager;
 import com.sm.db.DBVerno;
 import com.sm.db.DBhelper;
 
@@ -62,7 +65,8 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 	String selcompany,selsname,selstatus,seljuwei;
 	String selkeyun,selhuoyun,selxianyun,selyewu;
 	int skeyun,shuoyun,sxianyun,syewu,spage;
-	Log log = LogFactory.getLog( this.getClass());
+	//Log log = LogFactory.getLog( this.getClass());
+	private static final Log log = LogFactory.getLog(zmlh.class);
 	ImageIcon newimage;
 	static TrayIcon icon; // 托盘图标  
 	static SystemTray tray; // 本操作系统托盘的实例 
@@ -74,11 +78,8 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 	boolean queryb=true;
 	
 	
-  public static void main(String args[]){	
-	   
-		zmlh zmlh=new zmlh();
-	
-		
+  public static void main(String args[]){		   
+		zmlh zmlh=new zmlh();		
 	}
   
    //初始化右侧输入窗口
@@ -195,6 +196,8 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 		
         //初始化jtable
 		jt=new JTable(zmlhModle);
+		RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+		jt.setRowSorter(sorter); 
 		//jt.setBackground();
 
 		this.initInWind();	
@@ -590,7 +593,7 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
    //动作响应
    public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub	
-	   Log log = LogFactory.getLog( this.getClass());
+	   //Log log = LogFactory.getLog( this.getClass());
 	   //获取实时时间
 	  // this.jl2.setText("当前时间："+Calendar.getInstance().getTime().toLocaleString());
 	   
@@ -600,6 +603,7 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			cl.show(jp6, "1");
 			
             if(queryb){
+            	System.out.println("222222222");
             	for(int i=0;i<zmlhModle.getmodel(2, null).size();i++)
     			{
     				jcb11.addItem(zmlhModle.getmodel(2, null).get(i));
@@ -607,11 +611,13 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
     			}
             	queryb=false;
 			}else{
-				System.out.println(jcb11.getSelectedItem().toString().length());
+				//System.out.println(jcb11.getSelectedItem().toString().length());
 				this.query();
 				zmlhModle=new zmlhModle(querysql,2);
 				log.info(Login.userName+"查询："+querystring);
 	            jt.setModel(zmlhModle);
+	            RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+	    		jt.setRowSorter(sorter);
 			}
 			//String name=this.jp7_jtf2.getText().trim();
 			//querysql=SQL.Find_SQL_name+name+"%'";
@@ -638,7 +644,7 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			jb6.setEnabled(true);
 			jb3.setEnabled(false);
 			
-			//测试数据
+			/*//测试数据
 			String xmlString="<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
 			        "<results>"+
 					"<message>车站主数据</message>"+
@@ -660,13 +666,15 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			           "<所名略号>NNZ</所名略号>"+
 			           "<操作类型>3</操作类型>"+
 			           "</Row>"+
-			        "</results>";
+			        "</results>";*/
 			
-			DBGetWebData_Icr dbg=new DBGetWebData_Icr(xmlString);
+			DBGetWebData_Icr dbg=new DBGetWebData_Icr(new MyTools().xmlString);
 			dbg.InserDB();
 			String sql="select * from ##Tm_Table";
 			zmlhModle=new zmlhModle(sql,1);
 			jt.setModel(zmlhModle);
+			RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+			jt.setRowSorter(sorter);
 			//dbg.SeleTmDB();
 			//dbg.AddData();
            //
@@ -733,6 +741,8 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 				}
 				zmlhModle=new zmlhModle();				
 				jt.setModel(zmlhModle);
+				RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+				jt.setRowSorter(sorter);
 				
 			}} catch (Exception e) {
 				// TODO: handle exception
@@ -745,15 +755,23 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			cl.show(jp6, "0");
 			zmlhModle=new zmlhModle();
 			jt.setModel(zmlhModle);
+			RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+			jt.setRowSorter(sorter);
 			this.RemoveAllText();		
 		}else if(arg0.getSource()==jb6){
 			//同步更新数据到本地
 			
 			
-			DBGetWebData_Icr.SyndataDB();
+			if(DBGetWebData_Icr.SyndataDB()){
+				log.info("同步网络数据成功");
+				JOptionPane.showMessageDialog(this, "同步完成!");
+			}else{
+				log.info("同步网络数据失败");
+			}
 			
-			JOptionPane.showMessageDialog(this, "同步完成!");
 			jt.setModel(zmlhModle);
+			RowSorter<TableModel> sorter = new TableRowSorter<TableModel>(zmlhModle);
+			jt.setRowSorter(sorter);
 			jb6.setEnabled(false);
 		}else if(arg0.getSource()==jb4){
 			System.out.println("设置");
@@ -777,6 +795,9 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			String sql=SQL.Find_log_SQL;
 			logModle=new logModle(sql);
 			jt.setModel(logModle);
+			RowSorter<TableModel> logsorter = new TableRowSorter<TableModel>(logModle);
+			jt.setRowSorter(logsorter); 
+			//jt.removeEditor();
 			this.setVisible(true);
 		}else if(arg0.getSource()==jmt1){
 			this.dispose();

@@ -8,10 +8,11 @@ import java.util.Vector;
 import javax.swing.table.AbstractTableModel;
 
 import com.sm.db.DBConection;
+import com.sm.db.DBManager;
 import com.sm.tools.SQL;
 
 public class logModle extends AbstractTableModel{
-	static Connection ct=null;
+	Connection ct;
 	static PreparedStatement ps=null;
 	static ResultSet rs=null;
 	Vector rowData;
@@ -21,8 +22,9 @@ public class logModle extends AbstractTableModel{
 		this.init(sql);
 	}
 	public void init(String sql){
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+		ct=DBManager.getConn();
 		this.Set_columnNames();
 		this.Set_rowData(sql);
 	}
@@ -57,15 +59,13 @@ public class logModle extends AbstractTableModel{
 			try {
 				if(rs!=null) rs.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);
 				
 			} catch (Exception e2) {
 				e2.printStackTrace();
 				// TODO: handle exception
-			}	}
-			
-			
-		
+			}	
+		}		
 	}
 
     @Override

@@ -11,9 +11,8 @@
 	<classpathentry kind="lib" path="lib/saaj.jar"/>
 	<classpathentry kind="lib" path="lib/sqljdbc4.jar"/>
 	<classpathentry kind="lib" path="lib/wsdl4j-1.5.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/实/Desktop/commons-pool2-2.4.2-bin/commons-pool2-2.4.2/commons-pool2-2.4.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/实/Desktop/commons-pool-1.6-bin/commons-pool-1.6/commons-pool-1.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/实/Desktop/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/实/Desktop/commons-dbcp-1.4-bin/commons-dbcp-1.4/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

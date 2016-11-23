@@ -1,5 +1,7 @@
 package com.sm.db;
-
+/**
+ * 数据库连接池
+ */
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;

@@ -19,7 +19,7 @@ import com.sm.view.XmlAnalysis;
 import com.sm.view.zmlhModle;
 
 public class DBGetWebData {
-	static Connection ct=null;
+	static Connection ct;
 	static PreparedStatement ps=null;
 	//static PreparedStatement ps1=null;
 	//static PreparedStatement ps2=null;
@@ -38,8 +38,9 @@ public class DBGetWebData {
 			+ "(uid varchar(50),satname varchar(50),daima varchar(15),bsname varchar(50),code varchar(15))";
 		
 	   
-		DBConection dbc = new DBConection();   
-		ct = dbc.getConnection();
+		//DBConection dbc = new DBConection();   
+		//ct = dbc.getConnection();
+	   ct=DBManager.getConn();
 		try {
 				ps=ct.prepareStatement(CRsql);
 				ps.executeUpdate();
@@ -96,7 +97,7 @@ public class DBGetWebData {
 			try {
 				if(rs!=null) rs.close();
 				if(ps!=null) ps.close();
-				if(ct!=null) ct.close();
+				if(ct!=null) DBManager.closeConn(ct);
 				
 			} catch (Exception e2) {
 				e2.printStackTrace();

@@ -52,8 +52,8 @@ public class XmlAnalysis {
 		 return Tm_rs;
 	 }
 	 //获取最新版本号
-	 public String getVerno() {
-			System.out.println("verno:"+verno_TEXT);
+	 public static String getVerno() {
+			//System.out.println("webDBverno:"+verno_TEXT);
 			return verno_TEXT;
 		}
 		 /*public int getTotalPages() {
