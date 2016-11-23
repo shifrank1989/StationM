@@ -1,0 +1,74 @@
+2016-11-10 09:25:27  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 09:38:41  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 10:52:30  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 10:55:44  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 11:01:40  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 11:03:38  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 11:05:59  [ AWT-EventQueue-0:0 ] - [ INFO ]  admin成功登陆
+2016-11-10 13:19:47  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 13:19:53  [ AWT-EventQueue-0:6333 ] - [ INFO ]  退出系统
+2016-11-10 13:29:37  [ AWT-EventQueue-0:1 ] - [ INFO ]  退出系统
+2016-11-10 13:32:02  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 13:32:28  [ AWT-EventQueue-0:26296 ] - [ INFO ]  退出系统
+2016-11-10 13:34:08  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 13:36:17  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 13:38:56  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 13:39:42  [ AWT-EventQueue-0:45817 ] - [ INFO ]  退出系统
+2016-11-10 14:07:23  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 14:07:58  [ AWT-EventQueue-0:34387 ] - [ INFO ]  修改成功  ART
+2016-11-10 14:09:32  [ AWT-EventQueue-0:128889 ] - [ INFO ]  退出系统
+2016-11-10 14:17:39  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 14:17:48  [ AWT-EventQueue-0:8873 ] - [ INFO ]  修改成功  ARC
+2016-11-10 14:19:26  [ AWT-EventQueue-0:107317 ] - [ INFO ]  退出系统
+2016-11-10 14:19:51  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 14:24:50  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 14:25:57  [ AWT-EventQueue-0:66829 ] - [ INFO ]  退出系统
+2016-11-10 14:26:21  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 14:26:52  [ AWT-EventQueue-0:30533 ] - [ INFO ]  退出系统
+2016-11-10 14:52:02  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 15:04:47  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:08:26  [ AWT-EventQueue-0:0 ] - [ INFO ]  同步数据库成功<?xml version="1.0" encoding="UTF-8"?><results><message>车站主数据</message><verno>1.1.037b</verno><records>6</records><Row><唯一标识码>fdbdc3c1755f48a98cb5d4790838cefb</唯一标识码><车站名称>田东北    </车站名称><车站电报码>TBZ   </车站电报码><电报所名>南宁站    </电报所名><所名略号>NNZ    </所名略号><操作类型>3</操作类型></Row><Row><唯一标识码>e9f3cfa814754c2c9500346a17e66088</唯一标识码><车站名称>那何北</车站名称><车站电报码>HUZ</车站电报码><电报所名>南宁站</电报所名><所名略号>NNZ</所名略号><操作类型>3</操作类型></Row></results>
+2016-11-10 15:10:21  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 15:10:37  [ AWT-EventQueue-0:15497 ] - [ INFO ]  同步数据库成功<?xml version="1.0" encoding="UTF-8"?><results><message>车站主数据</message><verno>1.1.037b</verno><records>6</records><Row><唯一标识码>fdbdc3c1755f48a98cb5d4790838cefb</唯一标识码><车站名称>田东北    </车站名称><车站电报码>TBZ   </车站电报码><电报所名>南宁站    </电报所名><所名略号>NNZ    </所名略号><操作类型>3</操作类型></Row><Row><唯一标识码>e9f3cfa814754c2c9500346a17e66088</唯一标识码><车站名称>那何北</车站名称><车站电报码>HUZ</车站电报码><电报所名>南宁站</电报所名><所名略号>NNZ</所名略号><操作类型>3</操作类型></Row></results>
+2016-11-10 15:11:21  [ AWT-EventQueue-0:59504 ] - [ INFO ]  退出系统
+2016-11-10 15:11:55  [ AWT-EventQueue-0:0 ] - [ INFO ]  同步数据库成功<?xml version="1.0" encoding="UTF-8"?><results><message>车站主数据</message><verno>1.1.037b</verno><records>6</records><Row><唯一标识码>fdbdc3c1755f48a98cb5d4790838cefb</唯一标识码><车站名称>田东北    </车站名称><车站电报码>TBZ   </车站电报码><电报所名>南宁站    </电报所名><所名略号>NNZ    </所名略号><操作类型>1</操作类型></Row><Row><唯一标识码>e9f3cfa814754c2c9500346a17e66088</唯一标识码><车站名称>那何北</车站名称><车站电报码>HUZ</车站电报码><电报所名>南宁站</电报所名><所名略号>NNZ</所名略号><操作类型>1</操作类型></Row></results>
+2016-11-10 15:13:04  [ AWT-EventQueue-0:0 ] - [ INFO ]  同步数据库成功<?xml version="1.0" encoding="UTF-8"?><results><message>车站主数据</message><verno>1.1.037b</verno><records>6</records><Row><唯一标识码>fdbdc3c1755f48a98cb5d4790838cefb</唯一标识码><车站名称>田东北    </车站名称><车站电报码>TBZ   </车站电报码><电报所名>南宁站    </电报所名><所名略号>NNZ    </所名略号><操作类型>3</操作类型></Row><Row><唯一标识码>e9f3cfa814754c2c9500346a17e66088</唯一标识码><车站名称>那何北</车站名称><车站电报码>HUZ</车站电报码><电报所名>南宁站</电报所名><所名略号>NNZ</所名略号><操作类型>3</操作类型></Row></results>
+2016-11-10 15:13:20  [ AWT-EventQueue-0:84800 ] - [ INFO ]  退出系统
+2016-11-10 15:17:02  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 15:17:10  [ AWT-EventQueue-0:8248 ] - [ INFO ]  admin查询：
+2016-11-10 15:17:31  [ AWT-EventQueue-0:28863 ] - [ INFO ]  admin查询：阿城
+2016-11-10 15:17:46  [ AWT-EventQueue-0:44380 ] - [ INFO ]  同步数据库成功<?xml version="1.0" encoding="UTF-8"?><results><message>车站主数据</message><verno>1.1.037b</verno><records>6</records><Row><唯一标识码>fdbdc3c1755f48a98cb5d4790838cefb</唯一标识码><车站名称>田东北    </车站名称><车站电报码>TBZ   </车站电报码><电报所名>南宁站    </电报所名><所名略号>NNZ    </所名略号><操作类型>3</操作类型></Row><Row><唯一标识码>e9f3cfa814754c2c9500346a17e66088</唯一标识码><车站名称>那何北</车站名称><车站电报码>HUZ</车站电报码><电报所名>南宁站</电报所名><所名略号>NNZ</所名略号><操作类型>3</操作类型></Row></results>
+2016-11-10 15:18:35  [ AWT-EventQueue-0:92693 ] - [ INFO ]  退出系统
+2016-11-10 15:30:39  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:42:45  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:45:59  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:47:08  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:54:48  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:55:19  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:55:39  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:56:26  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 15:58:31  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:00:23  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 16:00:54  [ AWT-EventQueue-0:30986 ] - [ INFO ]  退出系统
+2016-11-10 16:05:02  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:05:32  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:09:38  [ AWT-EventQueue-0:0 ] - [ INFO ]  null查询：
+2016-11-10 16:10:15  [ AWT-EventQueue-0:37775 ] - [ INFO ]  退出系统
+2016-11-10 16:10:56  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:14:52  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:04  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:06  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:08  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:10  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:11  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:13  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:14  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:37:42  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:47:21  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 16:47:35  [ AWT-EventQueue-0:13922 ] - [ INFO ]  成功登陆
+2016-11-10 16:48:00  [ AWT-EventQueue-0:38814 ] - [ INFO ]  退出系统
+2016-11-10 16:53:04  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-10 16:53:26  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-10 16:53:28  [ AWT-EventQueue-0:2081 ] - [ INFO ]  退出系统
+2016-11-10 16:53:37  [ AWT-EventQueue-0:10677 ] - [ INFO ]  成功登陆
+2016-11-10 16:54:04  [ AWT-EventQueue-0:38409 ] - [ INFO ]  退出系统
