@@ -6,3 +6,9 @@
 2016-11-23 13:47:06  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
 2016-11-23 13:47:39  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
 2016-11-23 13:53:26  [ AWT-EventQueue-0:0 ] - [ INFO ]  退出系统
+2016-11-23 16:28:50  [ AWT-EventQueue-0:0 ] - [ INFO ]  成功登陆
+2016-11-23 16:29:11  [ AWT-EventQueue-0:20749 ] - [ INFO ]  退出系统
+2016-11-23 16:37:01  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-23 16:42:01  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-23 16:44:18  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-23 16:44:19  [ AWT-EventQueue-0:916 ] - [ INFO ]  成功登陆
