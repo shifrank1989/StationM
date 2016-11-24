@@ -93,3 +93,81 @@
 2016-11-23 22:40:20  [ AWT-EventQueue-0:6363 ] - [ INFO ]  退出系统
 2016-11-23 22:41:12  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
 2016-11-23 22:41:33  [ AWT-EventQueue-0:21520 ] - [ INFO ]  退出系统
+2016-11-24 14:58:48  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 14:58:49  [ AWT-EventQueue-0:967 ] - [ INFO ]  成功登陆
+2016-11-24 14:58:57  [ AWT-EventQueue-0:9327 ] - [ INFO ]  退出系统
+2016-11-24 14:59:07  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:02:23  [ AWT-EventQueue-0:196514 ] - [ INFO ]  退出系统
+2016-11-24 15:03:59  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:07:47  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:13:08  [ AWT-EventQueue-0:320759 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 15:13:08  [ AWT-EventQueue-0:321481 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 15:13:08  [ AWT-EventQueue-0:321504 ] - [ INFO ]  同步网络数据失败
+2016-11-24 15:24:07  [ AWT-EventQueue-0:980279 ] - [ INFO ]  退出系统
+2016-11-24 15:31:08  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:40:46  [ AWT-EventQueue-0:578470 ] - [ INFO ]  退出系统
+2016-11-24 15:46:14  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:46:26  [ AWT-EventQueue-0:11983 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 15:46:27  [ AWT-EventQueue-0:12698 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 15:46:27  [ AWT-EventQueue-0:12703 ] - [ INFO ]  同步网络数据失败
+2016-11-24 15:46:30  [ AWT-EventQueue-0:16410 ] - [ INFO ]  退出系统
+2016-11-24 15:46:39  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:46:47  [ AWT-EventQueue-0:8895 ] - [ INFO ]  数据库恢复成功
+2016-11-24 15:47:43  [ AWT-EventQueue-0:64123 ] - [ INFO ]  数据库恢复成功
+2016-11-24 15:48:20  [ AWT-EventQueue-0:101546 ] - [ INFO ]  退出系统
+2016-11-24 15:48:49  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:48:50  [ AWT-EventQueue-0:912 ] - [ INFO ]  成功登陆
+2016-11-24 15:49:04  [ AWT-EventQueue-0:15236 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 15:49:20  [ AWT-EventQueue-0:31331 ] - [ INFO ]  admin查询：介休
+2016-11-24 15:49:26  [ AWT-EventQueue-0:36880 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 15:49:37  [ AWT-EventQueue-0:47844 ] - [ INFO ]  admin查询：丰台西电报所
+2016-11-24 15:50:13  [ AWT-EventQueue-0:84623 ] - [ INFO ]  数据库备份成功!D:\java\github\StationM\backup\RMS_Station20161124.bak
+2016-11-24 15:50:31  [ AWT-EventQueue-0:102746 ] - [ INFO ]  数据库恢复成功
+2016-11-24 15:50:47  [ AWT-EventQueue-0:118421 ] - [ INFO ]  admin查询：丰台西电报所
+2016-11-24 15:50:50  [ AWT-EventQueue-0:121374 ] - [ INFO ]  admin查询：丰台西电报所
+2016-11-24 15:50:56  [ AWT-EventQueue-0:126772 ] - [ INFO ]  admin查询：介休
+2016-11-24 15:51:04  [ AWT-EventQueue-0:135289 ] - [ INFO ]  admin查询：二连电报所
+2016-11-24 15:51:18  [ AWT-EventQueue-0:149181 ] - [ INFO ]  退出系统
+2016-11-24 15:52:14  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 15:52:15  [ AWT-EventQueue-0:988 ] - [ INFO ]  成功登陆
+2016-11-24 15:52:44  [ AWT-EventQueue-0:29623 ] - [ INFO ]  退出系统
+2016-11-24 16:15:56  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:15:57  [ AWT-EventQueue-0:989 ] - [ INFO ]  成功登陆
+2016-11-24 16:16:01  [ AWT-EventQueue-0:5144 ] - [ INFO ]  数据库备份成功!D:\java\github\StationM\backup\RMS_Station20161124(1.1.037b).bak
+2016-11-24 16:16:23  [ AWT-EventQueue-0:26914 ] - [ ERROR ]  数据库恢复失败!String index out of range: -42
+2016-11-24 16:18:41  [ AWT-EventQueue-0:164836 ] - [ INFO ]  退出系统
+2016-11-24 16:18:59  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:19:00  [ AWT-EventQueue-0:921 ] - [ INFO ]  成功登陆
+2016-11-24 16:19:16  [ AWT-EventQueue-0:17080 ] - [ INFO ]  数据库恢复成功!
+2016-11-24 16:20:15  [ AWT-EventQueue-0:75561 ] - [ ERROR ]  数据库恢复失败!String index out of range: -1
+2016-11-24 16:20:34  [ AWT-EventQueue-0:95172 ] - [ ERROR ]  数据库恢复失败!String index out of range: -1
+2016-11-24 16:21:02  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:21:03  [ AWT-EventQueue-0:1041 ] - [ INFO ]  成功登陆
+2016-11-24 16:21:12  [ AWT-EventQueue-0:9893 ] - [ INFO ]  数据库恢复成功!
+2016-11-24 16:21:59  [ AWT-EventQueue-0:56628 ] - [ INFO ]  退出系统
+2016-11-24 16:22:51  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:22:52  [ AWT-EventQueue-0:1012 ] - [ INFO ]  成功登陆
+2016-11-24 16:23:13  [ AWT-EventQueue-0:21962 ] - [ INFO ]  数据库恢复成功!
+2016-11-24 16:23:24  [ AWT-EventQueue-0:33382 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 16:23:58  [ AWT-EventQueue-0:67116 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 16:23:59  [ AWT-EventQueue-0:67724 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 16:23:59  [ AWT-EventQueue-0:67726 ] - [ INFO ]  同步网络数据失败
+2016-11-24 16:24:06  [ AWT-EventQueue-0:75156 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 16:24:30  [ AWT-EventQueue-0:99408 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 16:24:37  [ AWT-EventQueue-0:106232 ] - [ INFO ]  admin查询：介休
+2016-11-24 16:25:18  [ AWT-EventQueue-0:146761 ] - [ INFO ]  退出系统
+2016-11-24 16:25:34  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:25:40  [ AWT-EventQueue-0:5818 ] - [ INFO ]  退出系统
+2016-11-24 16:34:25  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:34:28  [ AWT-EventQueue-0:2874 ] - [ INFO ]  退出系统
+2016-11-24 16:34:41  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:34:42  [ AWT-EventQueue-0:980 ] - [ INFO ]  成功登陆
+2016-11-24 16:35:00  [ AWT-EventQueue-0:19048 ] - [ INFO ]  admin查询：哈尔滨铁路局电报所
+2016-11-24 16:35:10  [ AWT-EventQueue-0:28779 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 16:35:10  [ AWT-EventQueue-0:29430 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 16:35:11  [ AWT-EventQueue-0:29436 ] - [ INFO ]  同步网络数据失败
+2016-11-24 16:41:49  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:42:38  [ main:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:42:43  [ AWT-EventQueue-0:4403 ] - [ INFO ]  退出系统
+2016-11-24 16:42:58  [ AWT-EventQueue-0:0 ] - [ INFO ]  Connected to Microsoft SQL Server 11.00.2218
+2016-11-24 16:42:59  [ AWT-EventQueue-0:892 ] - [ INFO ]  成功登陆

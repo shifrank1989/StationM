@@ -63,7 +63,7 @@ public class DBBackUp {
 		System.out.println();
         try {  
             File file = new File(classpath);  
-            String path = file.getPath() + "\\backup\\" +name+df.format(date)+ ".bak";// name文件名  
+            String path = file.getPath() + "\\backup\\" +name+df.format(date)+"("+DBVerno.lastVerno+")"+ ".bak";// name文件名  
             String bakSQL = "backup database RMS_Station to disk=? with init";// SQL语句  
             PreparedStatement bak = ct.prepareStatement(bakSQL);  
             bak.setString(1, path);// path必须是绝对路径  
@@ -83,7 +83,7 @@ public class DBBackUp {
      * 数据库还原 
      * @return recovery 
      */  
-    public String recovery() {  
+    public boolean recovery() {  
     	 /*try {
     		   UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     		  } catch (Exception e1) {
@@ -91,7 +91,8 @@ public class DBBackUp {
     		   e1.printStackTrace();
     		  }*/       
         //String webtruepath = request.getParameter("path");  
-        //String name = "******";  
+        //String name = "******"; 
+    	boolean r=true;
         String dbname = "RMS_Station"; 
         //FileSystemView fsv = new DirectoryRestrictedFileSystemView(new File("D:\\")); 
         JFileChooser jfc=new JFileChooser(new File(System.getProperty("user.dir")+ "\\backup\\"));
@@ -112,21 +113,25 @@ public class DBBackUp {
             //String path = file1.getPath() + "\\" + name + ".bak";// name文件名  
             String path=file.getAbsolutePath();
         	String recoverySql = "ALTER   DATABASE   RMS_Station   SET   ONLINE   WITH   ROLLBACK   IMMEDIATE";// 恢复所有连接  
-              
+        	/*int index1 = path.indexOf("(");
+        	int index2 = path.indexOf(")");
+            String RecVerno = path.substring(index1 + 1, index2); 
+            System.out.println("恢复版本号"+RecVerno);*/
             PreparedStatement ps =this.getConnection().prepareStatement(recoverySql);  
             CallableStatement cs = this.getConnection().prepareCall("{call killrestore(?,?)}");  
                 cs.setString(1, dbname); // 数据库名  
                 cs.setString(2, path); // 已备份数据库所在路径  
                 cs.execute(); // 还原数据库  
                 ps.execute(); // 恢复数据库连接    
-                log.info("数据库恢复成功");
+                //log.info("数据库恢复成功");
                 JOptionPane.showMessageDialog(null, "数据库恢复成功");
         } catch (Exception e) { 
         	log.error("数据库恢复失败!"+e.getMessage());
+        	r=false;
         	JOptionPane.showMessageDialog(null, "数据库恢复失败!\r\n"+e.getMessage());
             e.printStackTrace();  
         }  
-        return "recovery";  
+        return r;  
     }  
 
 

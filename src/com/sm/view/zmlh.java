@@ -644,7 +644,7 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			jb6.setEnabled(true);
 			jb3.setEnabled(false);
 			
-			/*//测试数据
+			//测试数据
 			String xmlString="<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
 			        "<results>"+
 					"<message>车站主数据</message>"+
@@ -666,9 +666,9 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 			           "<所名略号>NNZ</所名略号>"+
 			           "<操作类型>3</操作类型>"+
 			           "</Row>"+
-			        "</results>";*/
+			        "</results>";
 			
-			DBGetWebData_Icr dbg=new DBGetWebData_Icr(new MyTools().xmlString);
+			DBGetWebData_Icr dbg=new DBGetWebData_Icr(xmlString);
 			dbg.InserDB();
 			String sql="select * from ##Tm_Table";
 			zmlhModle=new zmlhModle(sql,1);
@@ -821,7 +821,21 @@ public class zmlh extends JFrame implements ActionListener, ListSelectionListene
 		}else if(arg0.getSource()==jmt7){
 			//还原数据库
 			DBBackUp backup=new DBBackUp();
-			backup.recovery();
+			if(backup.recovery()){
+			//log.info("数据库恢复成功!");
+				/*Runtime.getRuntime().addShutdownHook(new Thread() {
+		            public void run() {
+		                try {
+		                	String cmd=System.getProperty("user.dir")+"";
+							Runtime.getRuntime().exec("java Login");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+		            }    
+		        });
+		        System.exit(0);*/
+			};
 		}
 	}
  

@@ -1,0 +1,11 @@
+2016-11-24 15:13:08  [ AWT-EventQueue-0:320759 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 15:13:08  [ AWT-EventQueue-0:321481 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 15:46:26  [ AWT-EventQueue-0:11983 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 15:46:27  [ AWT-EventQueue-0:12698 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 16:16:23  [ AWT-EventQueue-0:26914 ] - [ ERROR ]  数据库恢复失败!String index out of range: -42
+2016-11-24 16:20:15  [ AWT-EventQueue-0:75561 ] - [ ERROR ]  数据库恢复失败!String index out of range: -1
+2016-11-24 16:20:34  [ AWT-EventQueue-0:95172 ] - [ ERROR ]  数据库恢复失败!String index out of range: -1
+2016-11-24 16:23:58  [ AWT-EventQueue-0:67116 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 16:23:59  [ AWT-EventQueue-0:67724 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在
+2016-11-24 16:35:10  [ AWT-EventQueue-0:28779 ] - [ ERROR ]  删除失败！站名略号：TBZ    不存在
+2016-11-24 16:35:10  [ AWT-EventQueue-0:29430 ] - [ ERROR ]  删除失败！站名略号：HUZ 不存在

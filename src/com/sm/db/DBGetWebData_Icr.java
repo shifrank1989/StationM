@@ -51,7 +51,8 @@ public class DBGetWebData_Icr {
 		}	
 		
 		//插入数据
-		public void InserDB(){	        
+		public void InserDB(){
+			System.out.println("temp长度"+TEMP.size());
 			for(int i=3;i<TEMP.size();i++){
 				String ISsql="insert into ##Tm_Table values (?,?, ?, ?, ?,?)";
 				try {					

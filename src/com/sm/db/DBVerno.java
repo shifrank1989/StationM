@@ -11,7 +11,7 @@ import com.sm.view.XmlAnalysis;
  */
 public class DBVerno {
 	public static String lastVerno="1.1.037b";
-	 //public static String webVerno="1.1.037b";
+	// public static String webVerno="1.1.037e";
 	static XmlAnalysis x=new XmlAnalysis(new MyTools().xmlString);
 	public static String webVerno=x.getVerno().trim();
 	public static boolean ListenVerno(){
